@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="352b5ca6-efb2-46c4-80b3-84344c1ac69a" name="Changes" comment="Zork game" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,6 +31,10 @@
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/eleni/ZorkGame",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
@@ -76,10 +83,24 @@
       <updated>1713875641437</updated>
       <workItem from="1713875642460" duration="1000" />
       <workItem from="1713876298393" duration="121000" />
+      <workItem from="1713876429863" duration="344000" />
     </task>
+    <task id="LOCAL-00001" summary="Zork game">
+      <option name="closed" value="true" />
+      <created>1713876450965</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1713876450965</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Zork game" />
+    <option name="LAST_COMMIT_MESSAGE" value="Zork game" />
   </component>
 </project>

@@ -61,6 +61,10 @@ public class ZorkController {
         bedroom.setExit("go to bathroom", bathroom);
         bedroom.setExit("go to living room", livingRoom);
         bedroom.setExit("go to kitchen", kitchen);
+
+        bathroom.setExit("go to bedroom", bedroom);
+        bathroom.setExit("go to living room", livingRoom);
+        bathroom.setExit("go to kitchen", kitchen);
         //initialise player too
         Player player = new Player(livingRoom);
         return player;
@@ -176,6 +180,28 @@ public class ZorkController {
 
 
     class LivingRoom {
+    public static  void goToLivingroom(boolean rooms, Player player, Scanner scanner)
+    {
+
+        while (rooms) {
+            System.out.print("Where do you want to go next: ");
+            String direction = scanner.nextLine();
+            player.move(direction);
+
+            switch (direction)
+            {
+                case "go to kitchen":
+                    rooms=false;
+                    break;
+                default:
+                    rooms=true;
+                    System.out.println("he is getting closer to you");
+                    break;
+            }
+        }
+    }
+
+
         public static void getHashtableItems(Hashtable itemsKitchen) {
             for (Object key : itemsKitchen.keySet()) {
                 System.out.println(key.hashCode() + "\t" + key + "\t" + itemsKitchen.get(key));
@@ -224,7 +250,7 @@ public class ZorkController {
             String getLine=scanner.nextLine();
 
             switch (getLine) {
-                case "go to livingroom":
+                case "go to living room":
                     player.move(getLine);
                     System.out.println("stab him and call 911");
                     rooms=false;
@@ -241,7 +267,7 @@ public class ZorkController {
             }}
     }
 
-        public boolean checkBackpack(Hashtable <Integer, String> yourBackPack)
+        public static boolean checkBackpack(Hashtable<Integer, String> yourBackPack)
         {
             boolean check;
             if (yourBackPack.containsKey("knife") && yourBackPack.containsKey("phone")) {
@@ -380,6 +406,37 @@ class Bedroom
         return itemsBedroom;
     }
 
+public static Hashtable findPhone(boolean rooms, Player player, Hashtable yourItems, Scanner scanner, Hashtable itemsBedroom, ZorkController controller)
+{
+    while (rooms){
+        System.out.println("you should find your phone");
+        String getLine=scanner.nextLine();
+
+        switch (getLine) {
+            case "hide":
+                System.out.println("you hear a noise");
+                break;
+            case "my items":
+                Room.getHashtableItems(yourItems);
+                break;
+            case "look":
+                Room.getHashtableItems(itemsBedroom);
+                break;
+            case "grab phone":
+               controller.setObjects("phone");
+                itemsBedroom.remove(2);
+                yourItems.put(2, "phone");
+                rooms=false;
+                System.out.println("you can now call for help");
+                rooms=false;
+                break;
+            default:
+                System.out.println("I'm sorry I cannot understand you");
+                break;
+        }}
+
+    return  yourItems;
+}
 
 
 
@@ -397,6 +454,49 @@ class Kitchen
         itemsKitchen.put(3, "trash");
         return itemsKitchen;
     }
+  public static Hashtable grabKnife(boolean rooms, Hashtable yourItems, Scanner scanner, Hashtable itemsKitchen)
+  {
+      while (rooms){
+          System.out.println("quick look for sth that can protect you");
+          String getLine=scanner.nextLine();
+          switch (getLine) {
+              case ("grab knife"):
+                  yourItems.put(1,"knife");
+                  itemsKitchen.remove(1);
+                  System.out.println("you hear his footsteps, quick go hide in the bedroom");
+                  rooms=false;
+                  break;
+              case  ("look"):
+                  Room.getHashtableItems(itemsKitchen);
 
+              default:
+                  System.out.println("you should look for sth that can cause damage");
+                  break;
+          }}
+      return yourItems;
+  }
+
+
+
+  public static void kitchenToLivingRoom(boolean rooms, Hashtable yourItems, Scanner scanner, Player player)
+  {
+
+      while (rooms){
+          System.out.println("you should hide in the bedroom");
+          String getLine=scanner.nextLine();
+
+          switch (getLine) {
+              case "go to bedroom":
+                  player.move(getLine);
+                  rooms=false;
+                  break;
+              case "my items":
+                  Room.getHashtableItems(yourItems);
+                  break;
+              default:
+                  System.out.println("I'm sorry I cannot understand you");
+                  break;
+          }}
+  }
 }
 
