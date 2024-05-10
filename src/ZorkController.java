@@ -2,6 +2,7 @@
 import java.io.File;
 import java.io.FileFilter;
 import java.io.FileWriter;
+import java.io.IOException;
 import java.util.*;
 
 public class ZorkController {
@@ -165,7 +166,32 @@ public class ZorkController {
         private String description;
         private Map<String, Room> exits;
         private List<String> items;
+        // Function to read commands from the text file
+        public List<String> readCommandsFromFile(File file) throws IOException {
+            List<String> commands = new ArrayList<>();
+            Scanner fileScanner = null;
 
+            try {
+                fileScanner = new Scanner(file);
+                while (fileScanner.hasNextLine()) {
+                    commands.add(fileScanner.nextLine());
+                }
+            } finally {
+                if (fileScanner != null) {
+                    fileScanner.close();  // Close the file scanner
+                }
+            }
+
+            return commands;
+        }
+        public void executeCommands(Player player, Scanner scanner, File file) throws IOException {
+            List<String> commands =readCommandsFromFile(file) ;
+
+            for (String command : commands) {
+                // Process each command based on existing game logic (e.g., move, look, grab)
+                // ... (your existing implementation for handling commands)
+            }
+        }
 
         public static void getUserInputToTXT(File file, String string)
         {

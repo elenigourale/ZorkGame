@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="352b5ca6-efb2-46c4-80b3-84344c1ac69a" name="Changes" comment="added niaou2">
-      <change afterPath="$PROJECT_DIR$/src/ParseGameEndings.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gameEndings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gameParameters.xml" afterDir="false" />
+    <list default="true" id="352b5ca6-efb2-46c4-80b3-84344c1ac69a" name="Changes" comment="proccess">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ZorkController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ZorkController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ZorkGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ZorkGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zork_log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/zork_log.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +131,23 @@
       <option name="project" value="LOCAL" />
       <updated>1713877443870</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="proccess">
+      <option name="closed" value="true" />
+      <created>1715341690152</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1715341690152</updated>
+    </task>
+    <task id="LOCAL-00006" summary="proccess">
+      <option name="closed" value="true" />
+      <created>1715341731640</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1715341731640</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,7 +157,8 @@
     <MESSAGE value="Zork game" />
     <MESSAGE value="added niaou" />
     <MESSAGE value="added niaou2" />
-    <option name="LAST_COMMIT_MESSAGE" value="added niaou2" />
+    <MESSAGE value="proccess" />
+    <option name="LAST_COMMIT_MESSAGE" value="proccess" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -157,12 +170,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ZorkController.java</url>
-          <line>264</line>
+          <line>282</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ZorkController.java</url>
-          <line>174</line>
+          <line>192</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
