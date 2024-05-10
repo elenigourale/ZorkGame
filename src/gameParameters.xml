@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gameParameters>
+    <rooms>
+        <first>kitchen</first>
+        <second>bedroom</second>
+        <third>bathroom</third>
+        <forth>living room</forth>
+    </rooms>
+    <staff>
+        <kitchen>knife</kitchen>
+        <bedroom>phone</bedroom>
+    </staff>
+    <points>
+        <bathroom>cat</bathroom>
+    </points>
+</gameParameters>

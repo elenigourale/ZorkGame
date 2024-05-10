@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gameEndings>
+    <ending>
+        <condition>gun,phone</condition>
+        <description>Congratulations! You saved yourself!</description>
+        <isWin>true</isWin>
+    </ending>
+</gameEndings>

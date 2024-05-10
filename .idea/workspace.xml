@@ -4,14 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="352b5ca6-efb2-46c4-80b3-84344c1ac69a" name="Changes" comment="added niaou" />
+    <list default="true" id="352b5ca6-efb2-46c4-80b3-84344c1ac69a" name="Changes" comment="added niaou2">
+      <change afterPath="$PROJECT_DIR$/src/ParseGameEndings.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gameEndings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gameParameters.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ZorkController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ZorkController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ZorkGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ZorkGame.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
@@ -109,7 +127,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713877399147</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added niaou2">
+      <option name="closed" value="true" />
+      <created>1713877443870</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1713877443870</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,6 +144,28 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Zork game" />
     <MESSAGE value="added niaou" />
-    <option name="LAST_COMMIT_MESSAGE" value="added niaou" />
+    <MESSAGE value="added niaou2" />
+    <option name="LAST_COMMIT_MESSAGE" value="added niaou2" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ParseGameEndings.java</url>
+          <line>84</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ZorkController.java</url>
+          <line>264</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ZorkController.java</url>
+          <line>174</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

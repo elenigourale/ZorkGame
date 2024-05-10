@@ -1,3 +1,4 @@
+import java.io.File;
 import java.util.*;
 
 
@@ -6,70 +7,85 @@ public class ZorkGame {
     static ZorkView view = new ZorkView();
     private static ZorkController controller = new ZorkController(model, view);
     private static Player player;
+      static File file = new File("C:\\Users\\30698\\Desktopww\\ZorkGame\\zork_log.txt");
 
     static Hashtable<Integer, String> yourItems= new Hashtable<>(10);
 
     public static void main(String[] args) {
-    player=controller.makeHomeArchitecture();
-        Room livingRoom = new Room("living room");
-        Room kitchen = new Room("kitchen");
-        Room bedroom = new Room("bedroom");
-        Room bathroom = new Room("bathroom");
-        Hashtable<Integer, String> itemsKitchen = Kitchen.initKitchenRoomItems();
-        Hashtable<Integer, String> itemsBedroom = Bedroom.initBedroomRoomItems();
-        Hashtable<Integer, String> itemsBathroom = Bathroom.initBathroomItems();
-        Hashtable<Integer,String>  itemsLivingroom=LivingRoom.initLivingRoomItems();
-      //  Room.getHashtableItems(itemsKitchen);
-        // getHashtableItems(itemsBedroom);
+        System.out.println("Welcome to our game do you want to continue or start a new one?");
 
-       // kitchen.getHashtableItems(itemsKitchen);
-        // Έναρξη παιχνιδιού
         Scanner scanner = new Scanner(System.in);
-        System.out.println("somebody is in your living room, quick go find sth in the kitchen");
-
-        System.out.println("You are now in: " + livingRoom.getDescription());
-           //int hisThesis;
 
 
+                player = controller.makeHomeArchitecture();
+                Room livingRoom = new Room("living room");
+                Room kitchen = new Room("kitchen");
+                Room bedroom = new Room("bedroom");
+                Room bathroom = new Room("bathroom");
+                Hashtable<Integer, String> itemsKitchen = Kitchen.initKitchenRoomItems();
+                Hashtable<Integer, String> itemsBedroom = Bedroom.initBedroomRoomItems();
+                Hashtable<Integer, String> itemsBathroom = Bathroom.initBathroomItems();
+                Hashtable<Integer, String> itemsLivingroom = LivingRoom.initLivingRoomItems();
+                // Room.getHashtableItems(itemsKitchen);
+                // getHashtableItems(itemsBedroom);
 
-        //living room to kitchen
-        boolean rooms=true;
-        LivingRoom.goToLivingroom( rooms, player, scanner);
+                // kitchen.getHashtableItems(itemsKitchen);
+                // Έναρξη παιχνιδιού
+        switch (scanner.nextLine()) {
+            case ("new one"):
+
+
+                //Scanner scanner = new Scanner(System.in);
+                System.out.println("somebody is in your living room, quick go find sth in the kitchen");
+
+                System.out.println("You are now in: " + livingRoom.getDescription());
+                //int hisThesis;
+
+                LivingRoom.lookForBackpack(player, scanner, file);
+
+                //living room to kitchen
+                LivingRoom.goToLivingroom(player, scanner, file);
 // kitchen to grab knife
-        rooms=true;
- yourItems=Kitchen.grabKnife(rooms,yourItems,scanner,itemsKitchen);
+
+                yourItems = Kitchen.grabKnife(yourItems, scanner, itemsKitchen, file);
 
 //kitchen to bedroom
 
-     rooms=true;
-        Kitchen.kitchenToLivingRoom( rooms,  yourItems,  scanner,  player);
+                Kitchen.kitchenToLivingRoom(yourItems, scanner, player, file);
 //bedroom to hide and grab phone
-        rooms=true;
-        yourItems=  Bedroom.findPhone( rooms, player, yourItems, scanner, itemsBedroom, controller);
-//go to bathroom
-        rooms=true;
-        Bathroom.goToBathroom(rooms, player, yourItems, scanner, itemsBedroom);
 
+                yourItems = Bedroom.findPhone(player, yourItems, scanner, itemsBedroom, controller, file);
+//go to bathroom
+
+                Bathroom.goToBathroom(player, yourItems, scanner, itemsBedroom, itemsBathroom, file);
 
 
 //go to living room and stab and call for help
 
 
-        rooms=true;
-        LivingRoom.goToLivingRoomFinal( rooms, player, yourItems, scanner);
+                LivingRoom.goToLivingRoomFinal(player, yourItems, scanner, itemsLivingroom, file);
+                boolean rooms;
+                rooms = LivingRoom.checkBackpack(yourItems);
 
-       rooms=true;
+                //stab + call = end
+//System.out.println(rooms);
+                yourItems = LivingRoom.endGame(rooms, yourItems, scanner, file);
 
-        //stab + call = end
+                break;
 
-            yourItems = LivingRoom.endGame(rooms, yourItems, scanner);
+            case ("old one"):
 
+               Room.getUserInputToTXT(file, scanner.nextLine() );
 
+                break;
+                default:
 
+                    break;
+            }
+        }
 
 
 
 
 
     }
-}
